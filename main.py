@@ -7,10 +7,13 @@ with open('index.html') as html_file:
 
 
 div = soup.find('div', class_ = 'article')
-print(div.text)
+# print(div.text)
 
-heading = div.h2.a
-print(heading.text)
+heading = div.h2.a.text
+print(heading)
+
+para = div.p.text
+print(para)
 
 
 
