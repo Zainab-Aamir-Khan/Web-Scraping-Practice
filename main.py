@@ -16,7 +16,8 @@ for div in soup.find_all('div', class_ = 'article'):
     print(para)
 
     print()
-
+footer = soup.find('div', class_ = 'footer')
+print(footer.text)
 
 
 
