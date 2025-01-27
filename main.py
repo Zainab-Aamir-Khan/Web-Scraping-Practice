@@ -6,14 +6,20 @@ with open('index.html') as html_file:
     soup = BeautifulSoup(html_file, 'lxml')
 
 
-div = soup.find('div', class_ = 'article')
+for div in soup.find_all('div', class_ = 'article'):
 # print(div.text)
 
-heading = div.h2.a.text
-print(heading)
+    heading = div.h2.a.text
+    print(heading)
 
-para = div.p.text
-print(para)
+    para = div.p.text
+    print(para)
+
+    print()
+
+
+
+
 
 
 
