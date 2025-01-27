@@ -12,3 +12,6 @@ print(div.text)
 heading = div.h2.a
 print(heading.text)
 
+content = soup.find('body')
+
+
