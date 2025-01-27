@@ -3,3 +3,5 @@ import requests
 
 url = requests.get('https://books.toscrape.com/')
 soup = BeautifulSoup('html_file', 'lxml')
+
+print(soup.prettify())
