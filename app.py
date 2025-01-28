@@ -34,6 +34,7 @@ for stocks in stock:
     print(allStocks)
 
 
-#scraping the 
+#scraping the form status
 form = content.find_all('button', class_ = 'btn btn-primary btn-block')
-print(form)
+for forms in form:
+    print(forms.text)
