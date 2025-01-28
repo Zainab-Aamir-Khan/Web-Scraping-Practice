@@ -1,10 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
+import csv
 
 url = requests.get('https://books.toscrape.com/').text
 soup = BeautifulSoup(url, 'lxml')
 
 content = soup.find('ol', class_ = 'row')
+
+csvFile = open('info.csv', 'w')
+csvWriter = csv.writer(csvFile)
+
 
 for allContent in content.find_all('li'):
 
