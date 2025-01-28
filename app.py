@@ -11,6 +11,7 @@ csvFile = open('info.csv', 'w')
 csvWriter = csv.writer(csvFile)
 
 
+
 for allContent in content.find_all('li'):
 
     heading = allContent.h3.text
@@ -26,3 +27,7 @@ for allContent in content.find_all('li'):
     print(form)
 
     print()
+
+    csvWriter.writerow([heading, prices, stock,form])
+    
+csvFile.close()
