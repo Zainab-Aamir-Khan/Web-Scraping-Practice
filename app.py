@@ -5,6 +5,8 @@ url = requests.get('https://books.toscrape.com/').text
 soup = BeautifulSoup(url, 'lxml')
 
 products = soup.find('ol', class_ = 'row')
+
+#scraping all the headings/title of the books
 content = soup.find('body')
 heading = content.find_all('h3')
 for headings in heading:
@@ -18,3 +20,8 @@ for headings in heading:
 #     print(book)
 
 
+#scraping all the prices of the books
+price = content.find_all('p', class_ = 'price_color')
+for prices in price:
+    allPrices = prices.text
+    print(allPrices)
