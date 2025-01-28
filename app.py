@@ -25,3 +25,15 @@ price = content.find_all('p', class_ = 'price_color')
 for prices in price:
     allPrices = prices.text
     print(allPrices)
+
+
+#scraping the status of stock
+stock = content.find_all('p', class_ = 'instock availability')
+for stocks in stock:
+    allStocks = stocks.text.strip()
+    print(allStocks)
+
+
+#scraping the 
+form = content.find_all('button', class_ = 'btn btn-primary btn-block')
+print(form)
