@@ -9,9 +9,8 @@ content = soup.find('ol', class_ = 'row')
 
 csvFile = open('info.csv', 'w')
 csvWriter = csv.writer(csvFile)
-
-
-
+csvWriter.writerow(['heading', 'prices', 'stock','form'])
+ 
 for allContent in content.find_all('li'):
 
     heading = allContent.h3.text
