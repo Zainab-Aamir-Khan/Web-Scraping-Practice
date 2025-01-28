@@ -20,4 +20,4 @@ for allContent in content.find_all('li'):
     form = allContent.find('button', class_ = 'btn btn-primary btn-block').text.strip()
     print(form)
 
-
+    print()
